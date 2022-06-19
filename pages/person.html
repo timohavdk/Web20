@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles/personstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="person">
+            <h1 class="person__logo">
+                Finder
+            </h1>
+            <h2 class="person__fullname">
+                Victor Menshikov
+            </h2>
+            <form action="" class="person__form">
+                <fieldset>
+                    <div class="person__box">
+                        <h3 class="person__skills">E-mail:</h3>
+                        <input class="person__select_e" type="email" id="e-mail" value="example@email.com">
+                    </div>
+                    <div class="person__box">
+                        <h3 class="person__skills">Knowed:</h3>
+                        <select size=1 multiple name="" id="" class="person__select">
+                            <option value="s1" class="">Python</option>
+                            <option value="s2" class="">C++</option>
+                            <option value="s3" class="">C</option>
+                            <option value="s4" class="">C#</option>
+                            <option value="s5" class="">Rust</option>
+                            <option value="s6" class="">Go</option>
+                            <option value="s7" class="">Kotlin</option>
+                            <option value="s8" class="">Java</option>
+                            <option value="s9" class="">JavaScript</option>
+                            <option value="s10" class="">Pascal</option>
+                            <option value="s11" class="">Basic</option>
+                            <option value="s12" class="">React</option>
+                            <option value="s13" class="">Django</option>
+                            <option value="s14" class="">Flask</option>
+                            <option value="s15" class="">Angular</option>
+                            <option value="s16" class="">Kivy</option>
+                            <option value="s17" class="">Numpy</option>
+                            <option value="s18" class="">Pandas</option>
+                            <option value="s19" class="">Math</option>
+                            <option value="s20" class="">Unreal Engine</option>
+                        </select>
+                    </div>
+                    <div class="person__box">
+                        <h3 class="person__skills">Wanted:</h3>
+                        <select multiple name="" id="" class="person__select">
+                            <option value="s1" class="">Python</option>
+                            <option value="s2" class="">C++</option>
+                            <option value="s3" class="">C</option>
+                            <option value="s4" class="">C#</option>
+                            <option value="s5" class="">Rust</option>
+                            <option value="s6" class="">Go</option>
+                            <option value="s7" class="">Kotlin</option>
+                            <option value="s8" class="">Java</option>
+                            <option value="s9" class="">JavaScript</option>
+                            <option value="s10" class="">Pascal</option>
+                            <option value="s11" class="">Basic</option>
+                            <option value="s12" class="">React</option>
+                            <option value="s13" class="">Django</option>
+                            <option value="s14" class="">Flask</option>
+                            <option value="s15" class="">Angular</option>
+                            <option value="s16" class="">Kivy</option>
+                            <option value="s17" class="">Numpy</option>
+                            <option value="s18" class="">Pandas</option>
+                            <option value="s19" class="">Math</option>
+                            <option value="s20" class="">Unreal Engine</option>
+                        </select>
+                    </div>
+                    <div class="person__box">
+                        <h3 class="person__wish">I wanted to be a mentor:</h3>
+                        <input class="person__check" type="checkbox">
+                    </div>
+                    <div class="person__box">
+                        <h3 class="person__wish">I wanted to find a mentor:</h3>
+                        <input class="person__check" type="checkbox">
+                    </div>
+                    <div class="person__box_t">
+                        <h3 class="person__wish_s">Some about me:</h3>
+                        <textarea placeholder="Write something about you..." name="" id="" cols="15" rows="10" class="person__information"></textarea>
+                    </div>
+                    <div class="person__box">
+                        <h3 class="person__wish">Lunch time:</h3>
+                        <input list="timing" type="time" min="09:00" max="18:00" class="person__select_l">
+                        
+                        <input list="timing_2" type="time" min="10:00" max="18:00" class="person__select_l">   
+                    </div> 
+                </fieldset>
+                
+                <div class="person__verification">
+                    <button class="person__button">Save</button>
+                    <button class="person__button_r">Correct</button>
+                </div>      
+            </form>
+            
+        </div>
+    </div>
+    <script>
+        var data = location.search.substring(1).split('&');
+        var check_data = [];
+        while(d = data.shift()) {
+            d = d.split('=');
+            check_data.push(d[1]);
+        }
+        var name_lastname = decodeURIComponent(check_data[0]) + " " + decodeURIComponent(check_data[1]);
+        var email_adres = decodeURIComponent(check_data[2]);
+        document.querySelector('.person__fullname').innerHTML = name_lastname;
+        document.querySelector('#e-mail').value = email_adres;
+        if (check_data.length > 3) {
+            localStorage.setItem("name", decodeURIComponent(check_data[0]));
+            localStorage.setItem("lastname", decodeURIComponent(check_data[1]));
+            localStorage.setItem("email", decodeURIComponent(check_data[2]));
+        }
+
+        var correct = document.querySelector('.person__button_r');
+        var save = document.querySelector('.person__button');
+        var field = document.querySelector('fieldset');
+        save.onclick = function(){
+            field.setAttribute("disabled", "disabled");
+        }
+        correct.onclick = function(){
+            field. removeAttribute("disabled");
+        }
+    </script>
+</body>
+</html>

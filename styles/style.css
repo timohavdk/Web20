@@ -1,0 +1,403 @@
+@charset "UTF-8";
+* {
+  /*Обращение ко всем тэгам на странице*/
+  padding: 0;
+  /*отступ от объекта до границы*/
+  margin: 0;
+  /*отступ от границы*/
+  border: 0;
+  /*граница*/
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+/*именение линий обводки*/
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+/*изменение поведения тэгов на блочные*/
+html, body {
+  /*Уравнивает поведение шрифтов и элементов для разных браузеров*/
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+/*наследование семейства шрифтов*/
+input::-ms-clear {
+  display: none;
+}
+
+/*снятие браузерных стилей для элементов*/
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*Обнуление параметров заголовков*/
+body {
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  background-color: #121542;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.intro_logo {
+  text-align: center;
+  color: #FF0C6A;
+  font-weight: bold;
+}
+.intro_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.intro_button {
+  background-color: #17D686;
+  color: white;
+}
+.intro_login {
+  text-align: center;
+}
+.intro_input {
+  text-align: center;
+  color: black;
+  background-color: white;
+  border: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+.intro_input:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #bdbdbd;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.5rem rgba(158, 158, 158, 0.25);
+          box-shadow: 0 0 0 0.5rem rgba(158, 158, 158, 0.25);
+}
+.intro_help {
+  color: #FF0C6A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.intro_button {
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+.intro_button__login {
+  -webkit-transition: 1s;
+  transition: 1s;
+  text-align: center;
+  color: white;
+  background-color: #E9E122;
+  border: 0;
+}
+
+.intro_button:active {
+  border-color: #bdbdbd;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.5rem #FF0C6A;
+          box-shadow: 0 0 0 0.5rem #FF0C6A;
+}
+
+.intro_button__login:active {
+  border-color: #bdbdbd;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.5rem #17D686;
+          box-shadow: 0 0 0 0.5rem #17D686;
+}
+
+.intro_check {
+  background-color: white;
+  color: #FF0C6A;
+  margin: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.intro_button__login {
+  text-align: center;
+  color: white;
+  background-color: #E9E122;
+  border: 0;
+}
+
+@media (min-width: 1200px) {
+  .intro {
+    max-width: 960px;
+  }
+  .intro_logo {
+    margin-top: 120px;
+    margin-bottom: 90px;
+    font-size: 96px;
+  }
+  .intro_form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .intro_registration {
+    margin-bottom: 28px;
+  }
+  .intro_button {
+    background-color: #17D686;
+    color: white;
+  }
+  .intro_login {
+    text-align: center;
+  }
+  .intro__input {
+    text-align: center;
+    color: black;
+    background-color: white;
+    border: 0;
+    padding: 20px;
+  }
+  .intro_help {
+    margin-bottom: 28px;
+  }
+
+  .block-i {
+    width: 240px;
+    height: 45px;
+    border-radius: 45px;
+    margin-bottom: 28px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .block {
+    width: 240px;
+    height: 45px;
+    border-radius: 45px;
+    margin-bottom: 28px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .intro_check {
+    width: 22.5px;
+    height: 22.5px;
+    margin-right: 21px;
+  }
+
+  .text {
+    font-size: 22px;
+  }
+}
+@media (min-width: 960px) and (max-width: 1199px) {
+  .intro {
+    max-width: 720px;
+  }
+  .intro_logo {
+    margin-top: 100px;
+    margin-bottom: 75px;
+    font-size: 64px;
+  }
+  .intro_form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .intro_registration {
+    margin-bottom: 23.3333333333px;
+  }
+  .intro_button {
+    background-color: #17D686;
+    color: white;
+  }
+  .intro_login {
+    text-align: center;
+  }
+  .intro__input {
+    text-align: center;
+    color: black;
+    background-color: white;
+    border: 0;
+    padding: 16.6666666667px;
+  }
+  .intro_help {
+    margin-bottom: 23.3333333333px;
+  }
+
+  .block-i {
+    width: 200px;
+    height: 37.5px;
+    border-radius: 37.5px;
+    margin-bottom: 23.3333333333px;
+    padding: 16.6666666667px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .block {
+    width: 200px;
+    height: 37.5px;
+    border-radius: 37.5px;
+    margin-bottom: 23.3333333333px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .intro_check {
+    width: 18.75px;
+    height: 18.75px;
+    margin-right: 17.5px;
+  }
+
+  .text {
+    font-size: 20px;
+  }
+}
+@media (min-width: 360px) and (max-width: 959px) {
+  .intro {
+    max-width: 360px;
+  }
+  .intro_logo {
+    margin-top: 75px;
+    margin-bottom: 56.25px;
+    font-size: 48px;
+  }
+  .intro_form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .intro_registration {
+    margin-bottom: 17.5px;
+  }
+  .intro_button {
+    background-color: #17D686;
+    color: white;
+  }
+  .intro_login {
+    text-align: center;
+  }
+  .intro__input {
+    text-align: center;
+    color: black;
+    background-color: white;
+    border: 0;
+    padding: 12.5px;
+  }
+  .intro_help {
+    margin-bottom: 17.5px;
+  }
+
+  .block-i {
+    width: 150px;
+    height: 28.125px;
+    border-radius: 28.125px;
+    margin-bottom: 17.5px;
+    padding: 12.5px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .block {
+    width: 150px;
+    height: 28.125px;
+    border-radius: 28.125px;
+    margin-bottom: 17.5px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .intro_check {
+    width: 14.0625px;
+    height: 14.0625px;
+    margin-right: 13.125px;
+  }
+
+  .text {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,298 @@
+@import "nullstyle.scss";
+
+$vez-blue: #121542;
+$vez-rouse: #FF0C6A;
+$vez-green: #17D686;
+$vez-yellow: #E9E122;
+
+$width-block: 240px;
+$height-block: 45px;
+$width-block-r: 185px;
+$margin-b-block: 28px;
+$margin-b-logo: 90px;
+$margin-t-logo: 120px;
+$sq: 22.5px;
+
+$l-l: 96px; 
+$l-m: 64px;
+$l-s: 48px; 
+$t-s-l: 22px;
+$t-s-m: 20px;
+$t-s-s: 15px;
+
+$k-960: 5/6;
+$k-360: 0.625;
+
+
+
+body{
+	font-weight: bold;
+	font-family: 'Roboto', sans-serif;
+	background-color: $vez-blue;
+}
+.wrapper {
+	display: flex;
+	justify-content: center;
+}
+.intro {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	&_logo {
+		text-align: center;
+		color: $vez-rouse;
+		font-weight: bold;
+	}
+	&_form {
+		display: flex;
+		flex-direction: column;
+	}
+	&_registration {}
+	&_button {
+		background-color: $vez-green;
+		color: white;
+	}
+	&_login {
+		text-align: center;
+	}
+	&_input{
+		text-align: center;
+		color: black;
+		background-color: white;
+		border: 0;
+		transition: 1s;
+	}
+	&_input:focus{
+	  color: #212529;
+	  background-color: #fff;
+	  border-color: #bdbdbd;
+	  outline: 0;
+	  box-shadow: 0 0 0 0.5rem rgba(158, 158, 158, 0.25);
+	}
+	&_help{
+		color: $vez-rouse;
+		display: flex;
+		justify-content: center;
+	}
+}
+.intro_button {
+	transition: 1s;
+	&__login {
+		transition: 1s;
+		text-align: center;
+		color: white;
+		background-color: $vez-yellow;
+		border: 0;
+	}
+}
+.intro_button:active{
+	border-color: #bdbdbd;
+	outline: 0;
+	box-shadow: 0 0 0 0.5rem $vez-rouse;
+	
+}
+.intro_button__login:active {
+	border-color: #bdbdbd;
+	outline: 0;
+	box-shadow: 0 0 0 0.5rem $vez-green;
+}
+.intro_check{
+	background-color: white;
+	color: $vez-rouse;
+	margin: 0;
+	transition: 1s;
+}
+.intro_button {
+		&__login {
+			text-align: center;
+			color: white;
+			background-color: $vez-yellow;
+			border: 0;
+		}
+	}
+@media (min-width: 1200px) {
+	.intro {
+		max-width: 960px;
+		&_logo {
+			margin-top: $margin-t-logo; 
+			margin-bottom: $margin-b-logo;
+			font-size: $l-l;
+		}
+		&_form {
+			display: flex;
+			flex-direction: column;
+		}
+		&_registration {
+			margin-bottom: $margin-b-block;
+		}
+		&_button {
+			background-color: $vez-green;
+			color: white;
+		}
+		&_login {
+			text-align: center;
+		}
+		&__input{
+			text-align: center;
+			color: black;
+			background-color: white;
+			border: 0;
+			padding: 20px;
+		}
+		&_help{
+			margin-bottom: $margin-b-block;
+		}
+	}
+	
+	.block-i{
+		width: $width-block;
+		height: $height-block; 
+		border-radius: $height-block;
+		margin-bottom: $margin-b-block; 
+		padding: 20px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.block{
+		width: $width-block;
+		height: $height-block; 
+		border-radius: $height-block;
+		margin-bottom: $margin-b-block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.intro_check{
+		width: $sq;
+		height: $sq;
+		margin-right: $margin-b-block*0.75;
+	}
+	.text{
+		font-size: $t-s-l;
+	}
+}
+
+@media (min-width: 960px) and (max-width: 1199px) {
+	.intro {
+		max-width: 720px;
+		&_logo {
+			margin-top: $margin-t-logo*$k-960; 
+			margin-bottom: $margin-b-logo*$k-960;
+			font-size: $l-m;
+		}
+		&_form {
+			display: flex;
+			flex-direction: column;
+		}
+		&_registration {
+			margin-bottom: $margin-b-block*$k-960;
+		}
+		&_button {
+			background-color: $vez-green;
+			color: white;
+		}
+		&_login {
+			text-align: center;
+		}
+		&__input{
+			text-align: center;
+			color: black;
+			background-color: white;
+			border: 0;
+			padding: 20px*$k-960;
+		}
+		&_help{
+			margin-bottom: $margin-b-block*$k-960;
+		}
+	}
+	
+	.block-i{
+		width: $width-block*$k-960;
+		height: $height-block*$k-960; 
+		border-radius: $height-block*$k-960;
+		margin-bottom: $margin-b-block*$k-960; 
+		padding: 20px*$k-960;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.block{
+		width: $width-block*$k-960;
+		height: $height-block*$k-960; 
+		border-radius: $height-block*$k-960;
+		margin-bottom: $margin-b-block*$k-960;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.intro_check{
+		width: $sq*$k-960;
+		height: $sq*$k-960;
+		margin-right: $margin-b-block*0.75*$k-960;
+	}
+	.text{
+		font-size: $t-s-m;
+	}
+}
+
+@media (min-width: 360px) and (max-width: 959px){
+	.intro {
+		max-width: 360px;
+		&_logo {
+			margin-top: $margin-t-logo*$k-360; 
+			margin-bottom: $margin-b-logo*$k-360;
+			font-size: $l-s;
+		}
+		&_form {
+			display: flex;
+			flex-direction: column;
+		}
+		&_registration {
+			margin-bottom: $margin-b-block*$k-360;
+		}
+		&_button {
+			background-color: $vez-green;
+			color: white;
+		}
+		&_login {
+			text-align: center;
+		}
+		&__input{
+			text-align: center;
+			color: black;
+			background-color: white;
+			border: 0;
+			padding: 20px*$k-360;
+		}
+		&_help{
+			margin-bottom: $margin-b-block*$k-360;
+		}
+	}
+	
+	.block-i{
+		width: $width-block*$k-360;
+		height: $height-block*$k-360; 
+		border-radius: $height-block*$k-360;
+		margin-bottom: $margin-b-block*$k-360; 
+		padding: 20px*$k-360;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.block{
+		width: $width-block*$k-360;
+		height: $height-block*$k-360; 
+		border-radius: $height-block*$k-360;
+		margin-bottom: $margin-b-block*$k-360;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.intro_check{
+		width: $sq*$k-360;
+		height: $sq*$k-360;
+		margin-right: $margin-b-block*0.75*$k-360;
+	}
+	.text{
+		font-size: $t-s-s;
+	}
+}
+
